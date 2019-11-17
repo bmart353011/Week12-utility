@@ -24,3 +24,6 @@ def FindWordCount(list1, word):
     count = list1.count(word)
     return count
     
+def Intersection(P1, P2):
+    my_list = P1 + P2
+    return my_list
