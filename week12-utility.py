@@ -4,6 +4,7 @@
 
 def PrintOutput(output):
     print("OUTPUT", output)
+    
 def LoadFile(file_name):
     f = open(file_name, "r")
     contents_lines = f.readlines()
@@ -14,5 +15,8 @@ def LoadFile(file_name):
     return my_list
     f.close()
 
-
+def UpdateString(s1, s2, index):
+    my_list = list(s1)
+    my_list[index] = s2
+    PrintOutput("".join(my_list))
     
