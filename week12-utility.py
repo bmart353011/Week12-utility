@@ -19,4 +19,8 @@ def UpdateString(s1, s2, index):
     my_list = list(s1)
     my_list[index] = s2
     PrintOutput("".join(my_list))
+
+def FindWordCount(list1, word):
+    count = list1.count(word)
+    return count
     
