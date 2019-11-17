@@ -7,7 +7,12 @@ def PrintOutput(output):
 def LoadFile(file_name):
     f = open(file_name, "r")
     contents_lines = f.readlines()
+    my_list = []
     for line in contents_lines:
-        my_list = line.split(' ')
+        lines1 = line.split('/n')
+        my_list.append(lines1)
     return my_list
     f.close()
+
+
+    
