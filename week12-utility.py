@@ -2,16 +2,14 @@
 # CSCI 102 - Section A
 # Week 12 - Part A
 
+import string
 def PrintOutput(output):
     print("OUTPUT", output)
     
 def LoadFile(file_name):
     with open(file_name) as file:
-        contents_lines = file.readlines()
-        for line in contents_lines:
-            lines1 = line.split(' ')
-    return lines1
-    
+        my_list = file.read().splitlines()
+        return my_list
 
 def UpdateString(s1, s2, index):
     my_list = list(s1)
@@ -21,6 +19,20 @@ def UpdateString(s1, s2, index):
 def FindWordCount(list1, word):
     count = list1.count(word)
     return count
+
+def ScoreFinder(list1, list2, name):
+    name1 = name.upper()
+    my_list = []
+    for i in list1:
+        i = i.upper()
+        my_list.append(i)
+    if name1 in my_list:
+        index = my_list.index(name1)
+        score = list2[index]
+        print("OUTPUT", name, "got a score of", score)
+    else:
+        print("OUPUT player not found")
+    
     
 def Intersection(P1, P2):
     my_list = P1 + P2
