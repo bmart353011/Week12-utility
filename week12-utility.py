@@ -32,7 +32,20 @@ def ScoreFinder(list1, list2, name):
         print("OUTPUT", name, "got a score of", score)
     else:
         print("OUPUT player not found")
-    
+
+def Union(list1, list2):
+    my_list = []
+    my_list2 = []
+    my_list1= []
+    for i in list1:
+        if i not in my_list1:
+            my_list1.append(i)
+    for i in list2:
+        i = i.upper()
+        if i not in my_list2:
+            my_list2.append(i)
+    my_list = my_list1 + my_list2
+    return my_list
     
 def Intersection(P1, P2):
     my_list = P1 + P2
