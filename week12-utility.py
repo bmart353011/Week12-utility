@@ -50,3 +50,13 @@ def Union(list1, list2):
 def Intersection(P1, P2):
     my_list = P1 + P2
     return my_list
+
+def NotIn(list1, list2):
+    my_list = []
+    for i in list1:
+        if i not in list2:
+            my_list.append(i)
+    return my_list
+        
+
+
